@@ -16,7 +16,7 @@ class DbDump
      */
     public static function dumpToMaster()
     {
-        $parameters = Yaml::parseFile(dirname(__DIR__) . '/app/config/parameters.yml');
+        $parameters = Yaml::parseFile(__DIR__. '/../../../../app/config/parameters.yml');
 
         $mysql = new Mysql([
             'host' => $parameters['parameters']['database_host'],
